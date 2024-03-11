@@ -17,7 +17,7 @@ jobs:
           protected-app-specific:
             - 'values/protected-app-specific/**'
             
-    - name: Checking PR test?
+    - name: Checking protected area
       if: steps.filter.outputs.protected-app-specific == 'true'
       uses: JJ/github-pr-contains-action@releases/v12
       with:
