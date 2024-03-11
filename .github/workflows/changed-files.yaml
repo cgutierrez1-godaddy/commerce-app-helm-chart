@@ -4,8 +4,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - values/protected-app-specific/**
 
 jobs:
   check_pr:
@@ -14,5 +12,6 @@ jobs:
       - name: Check PR
         uses: JJ/github-pr-contains-action@releases/v12
         with:
+          files: values/protected-app-specific/**
           github-token: ${{github.token}}
           diffDoesNotContain: "name: |type: "
