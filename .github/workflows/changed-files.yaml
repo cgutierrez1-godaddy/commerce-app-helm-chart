@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - values/protected-app-specific/**
+
 
 jobs:
   check_pr:
