@@ -3,9 +3,9 @@ app:
   subdomainModifiers:
     - int
     - int-ro
-  type: reader
+  type: service
 hpa:
-  enabled: true
+  enabled: false
 configs:
   standard:
     # No outbound calls requiring client cert or to other NES services, so no
