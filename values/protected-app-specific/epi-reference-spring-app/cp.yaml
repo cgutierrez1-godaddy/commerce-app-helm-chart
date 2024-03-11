@@ -1,8 +1,8 @@
 app:
-  name: epi-reference-spring-app-v2
+  name: epi-reference-spring-app
   subdomainModifiers:
-    - ext
-    - ext-ro
+    - int
+    - int-ro
   type: service
 hpa:
   enabled: false
