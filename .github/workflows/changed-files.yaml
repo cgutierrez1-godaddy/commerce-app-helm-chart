@@ -9,9 +9,17 @@ jobs:
   check_pr:
     runs-on: ubuntu-latest
     steps:
-      - name: Checking PR ?
-        uses: JJ/github-pr-contains-action@releases/v12
-        with:
-          files: values/protected-app-specific/**
-          github-token: ${{github.token}}
-          diffDoesNotContain: "name: |type: "
+    - uses: actions/checkout@v3
+    - uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        filters: |
+          protected-app-specific:
+            - 'values/protected-app-specific/**'
+            
+    - name: Checking PR test?
+      if: steps.filter.outputs.protected-app-specific == 'true'
+      uses: JJ/github-pr-contains-action@releases/v12
+      with:
+        github-token: ${{github.token}}
+        diffDoesNotContain: "name: |type: "
