@@ -22,4 +22,4 @@ jobs:
       uses: JJ/github-pr-contains-action@releases/v12
       with:
         github-token: ${{github.token}}
-        diffDoesNotContain: "name: |type: "
+        diffDoesNotContain: "name: |type: |cpu: |memory:"
