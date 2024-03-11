@@ -9,7 +9,7 @@ jobs:
   check_pr:
     runs-on: ubuntu-latest
     steps:
-      - name: Checking PR
+      - name: Checking PR ?
         uses: JJ/github-pr-contains-action@releases/v12
         with:
           files: values/protected-app-specific/**
