@@ -1,0 +1,15 @@
+app:
+  name: epi-reference-spring-app
+  subdomainModifiers:
+    - int
+    - int-ro
+  type: service
+hpa:
+  enabled: false
+configs:
+  standard:
+    # No outbound calls requiring client cert or to other NES services, so no
+    # need for client cert.
+    clientCerts:
+      ecomm-shared:
+        enabled: false
