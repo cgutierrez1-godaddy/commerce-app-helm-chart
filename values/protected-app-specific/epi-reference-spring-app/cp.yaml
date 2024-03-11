@@ -1,11 +1,11 @@
 app:
-  name: epi-reference-spring-app-v2
+  name: epi-reference-spring-app
   subdomainModifiers:
     - int
     - int-ro
   type: service
 hpa:
-  enabled: false
+  enabled: true
 configs:
   standard:
     # No outbound calls requiring client cert or to other NES services, so no
